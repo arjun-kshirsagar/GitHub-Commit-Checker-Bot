@@ -1,18 +1,79 @@
 import requests
 import urllib3
+import warnings
+from datetime import datetime
 
 urllib3.disable_warnings(urllib3.exceptions.NotOpenSSLWarning)
+warnings.simplefilter('ignore', urllib3.exceptions.InsecureRequestWarning)
 
 # Constants
 GITHUB_API_URL = "https://api.github.com"
-TOKEN = "API Token Here"
+TOKEN = ""
 STUDENTS = [
     "arjun-kshirsagar",
     "UditNayak",
-    "AbhinavGupta-de"
+    "AbhinavGupta-de",
+    "charanbhatia",
+    "Thrishalmadasu",
+    "Vishesh-Paliwal",
+    "kohantikanath",
+    "harshinireddy05",
+    "sanjanaynvsdl",
+    "satish-rathod",
+    "KKartikay-27",
+    "Krupakar-Reddy-S",
+    "BHAV0207",
+    "Arnavya",
+    "Ajai-Sharan",
+    "kananarora1",
+    "Beserker-356",
+    "nobitaN0bi",
+    "abhinav26966",
+    "Swarnim114",
+    "HackerXeroid",
+    "mayank-vashishtt",
+    "poojatalele",
+    "GSRK-BZA",
+    "attaditya",
+    "tamanna1809",
+    "TanviAgarwal-14",
+    "Rudrakc",
+    "Manan21st",
+    "sachan13harshit",
+    "kumarprince7999",
+    "mayank1365",
+    "kumarprince7999",
+    "mayank1365",
+    "harshinireddy05",
+    "its-harshitgoel",
+    "Yash020405",
+    "sanjanaynvsdl",
+    "DevMhrn",
+    "BarryByte",
+    "MrPhenomenal3110",
+    "kumarprince7999",
+    "rushil-118",
+    "sgnhyperion",
+    "purvanshh",
+    "H-A-R-S-H-K",
+    "harsh-791",
+    "harsh-kumar-patwa",
+    "amlanxbghn",
+    "VinayakPaka",
+    "neeldholiya04",
+    "nullHawk",
+    "Suryansh-D",
+    "lokendra005",
+    "Vijaygaurav2004",
+    "shailendra-jurel",
+    "shrimay18",
+    "Dipti0704",
+    "Shreshthaaa",
+    "hemkeshkantawala11",
+    "sailingsam"
     # Add more students' GitHub usernames
 ]
-CHECK_DATE = "2024-06-16"  # The date to check commits for (YYYY-MM-DD)
+CHECK_DATE = "2024-06-21"  # The date to check commits for (YYYY-MM-DD)
 
 # Function to get repositories for a specific user
 def get_repositories(username):

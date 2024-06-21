@@ -5,7 +5,7 @@ urllib3.disable_warnings(urllib3.exceptions.NotOpenSSLWarning)
 
 # Constants
 GITHUB_API_URL = "https://api.github.com"
-TOKEN = "API Token Here"
+TOKEN = ""
 STUDENTS = {
     "arjun-kshirsagar": "My-Website",
     "UditNayak": "portfolio",
